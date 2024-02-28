@@ -1,0 +1,26 @@
+.comment{
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 15px;
+    color: black;
+    background-color: white;
+}
+
+.comment__text{
+    padding-bottom: 15px;
+}
+
+.comment__button{
+    font-size: 20px;
+    color: white;
+    background-color: #282c34;
+    border: 1px solid black;
+    padding: 7px 10px;
+    border-radius: 10px;
+}
+
+.comment__button:hover{
+    background-color: white;
+    color: black;
+}
