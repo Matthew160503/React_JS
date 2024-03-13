@@ -1,0 +1,16 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-theme{
+    background-color: azure;
+    color: black;
+}
+
+.dark-theme{
+    background-color: black;
+    color: azure;
+}
