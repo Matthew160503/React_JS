@@ -1,0 +1,231 @@
+.carousel {
+    background: #F7F7F7;
+    height: 777px;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.d-block {
+    margin: auto;
+}
+
+.box {
+    width: 47px;
+    height: 47px;
+    background: rgba(42, 42, 42, 0.15);
+    @include flexJustify();
+}
+
+.carousel-control-prev {
+    justify-content: flex-start;
+}
+
+.carousel-control-next {
+    justify-content: flex-end;
+}
+
+.carousel-control-prev-icon {
+    background-image: none;
+}
+
+.carousel-control-next-icon {
+    background-image: none;
+}
+
+.box:hover path {
+    fill: $siteMainColor;
+}
+
+.box_about {
+    height: 601px;
+    margin-bottom: 130px;
+
+    &_item {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        background-color: #fff;
+        margin-top: -65px;
+        position: relative;
+        outline: 1px solid #EAEAEA;
+        @include flexJustify(flex-start);
+        flex-direction: column;
+
+        &_prefix {
+            padding-top: 64px;
+            color: $siteMainColor;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        &_title {
+            color: #4D4D4D;
+            font-size: 18px;
+            font-weight: 300;
+            padding-top: 27px;
+        }
+
+        &_title::before {
+            content: '';
+            width: 63px;
+            height: 3.025px;
+            background-color: $siteMainColor;
+            top: 95px;
+            left: 534px;
+            position: absolute;
+        }
+
+        &_description {
+            color: #5E5E5E;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 300;
+            padding-top: 43px;
+            width: 555px;
+        }
+
+        &_price {
+            color: $siteMainColor;
+            font-size: 24px;
+            font-weight: 300;
+            padding-top: 32px;
+        }
+
+        &_cust::before {
+            content: '';
+            width: 641px;
+            height: 1px;
+            background-color: #EAEAEA;
+            top: 357px;
+            left: 250px;
+            position: absolute;
+        }
+
+        &_cust {
+            padding-top: 110px;
+            @include flexJustify($gapSize: 23px);
+
+            &_box {
+                display: flex;
+                flex-direction: row;
+                gap: 9px;
+                align-items: center;
+
+                &_subt {
+                    color: #6F6E6E;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+
+                &_selection {
+                    padding-bottom: 5px;
+                }
+            }
+        }
+
+        &_adding {
+            padding-top: 48px;
+            padding-bottom: 64px;
+
+            &_items {
+                background-color: #FFF;
+                width: 212px;
+                height: 48px;
+                color: $siteMainColor;
+                border: 1px solid $siteMainColor;
+            }
+
+            &_items:hover {
+                background-color: $siteMainColor;
+                color: #FFF;
+            }
+
+            &_items:hover path {
+                fill: #FFF;
+            }
+        }
+    }
+}
+
+.main {
+    margin-bottom: 128px;
+}
+
+@media (max-width: 1140px) {
+    .carousel {
+        height: 624px;
+    }
+
+    .d-block {
+        width: 455px;
+        height: 565px;
+        padding-top: 29px;
+    }
+
+    .box_about {
+        display: flex;
+        justify-content: center;
+
+        &_item {
+            margin-top: 0;
+            width: 768px;
+
+            &_title::before {
+                left: 351.5px
+            }
+
+            &_cust::before {
+                left: 63.5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .d-block {
+        width: 374px;
+        height: 454px;
+        padding-top: 85px;
+    }
+
+    .main{
+        margin-bottom: 64px;
+    }
+
+    .box_about{
+        margin-bottom: 64px;
+
+        &_item{
+            width: 375px;
+
+            &_title::before{
+                left: 154.84px;
+            }
+
+            &_description{
+                padding-top: 32px;
+                width: 326px;
+            }
+
+            &_cust::before{
+                width: 175px;
+                left: 100px;
+                top: 385px;
+            }
+
+            &_cust{
+                padding-top: 85.5px;
+
+                &_box_subt{
+                    font-size: 10px;
+                }
+            }
+
+            &_adding{
+                padding-top: 25px;
+            }
+        }
+    }
+}

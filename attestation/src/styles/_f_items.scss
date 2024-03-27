@@ -1,0 +1,96 @@
+.f_items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    &_item {
+        background-color: #F8F8F8;
+        height: 581px;
+
+        &_subtitle {
+            padding-top: 25px;
+            padding-bottom: 16px;
+            color: #000;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        &_description {
+            padding-bottom: 16px;
+            color: #5D5D5D;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        &_price {
+            padding-bottom: 50px;
+            color: $siteMainColor;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+}
+
+.overlay {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+
+    &_img {
+        width: 100%;
+        height: 420px;
+    }
+
+    &_container {
+        position: absolute;
+        background-color: rgba(58, 56, 56, 0.86);
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        transform: scale(0);
+        transition: .3s ease;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        &_block {
+            position: absolute;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            top: 45%;
+            left: 50%;
+        }
+
+        &_text {
+            position: absolute;
+            @include flexJustify();
+            align-items: center;
+            border: 1px solid #FFF;
+            width: 139px;
+            height: 44px;
+            color: #FFF;
+            font-size: 14px;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+}
+
+.overlay:hover .overlay_container {
+    transform: scale(1)
+}
+
+
+@media (max-width: 1140px) {
+    .f_items {
+        justify-content: center;
+        grid-template-columns: repeat(2, 360px);
+    }
+}
+
+@media (max-width: 768px) {
+    .f_items {
+        grid-template-columns: repeat(1, 360px);
+    }
+}

@@ -1,0 +1,169 @@
+.registration {
+    margin-top: 64px;
+    margin-bottom: 96px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.f_box {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+
+.fields {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+
+    &__names {
+        color: $headerAndFooterColor;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    &__description {
+        color: $descriptionColor;
+        font-size: 13px;
+        font-weight: 300;
+        margin-top: 15px;
+        margin-bottom: 39px;
+    }
+
+    &__button {
+        width: 167px;
+        height: 50px;
+        background-color: $siteMainColor;
+        border: none;
+        color: #FFF;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &__button:hover {
+        border: 1px solid $siteMainColor;
+        background-color: #FFF;
+        color: $siteMainColor;
+    }
+
+    &__button:hover path {
+        fill: $siteMainColor;
+    }
+
+    &__svg {
+        padding-left: 20px;
+    }
+}
+
+.entry-field {
+    width: 360px;
+    height: 44px;
+    color: #B1B1B1;
+    font-size: 13px;
+    font-weight: 300;
+    border: 1px solid $borderColor;
+    padding-left: 17px;
+    box-sizing: border-box;
+}
+
+.entry-field:hover {
+    transform: scale(1.04);
+    transition: .3s;
+}
+
+.gender {
+    display: flex;
+    gap: 10px;
+}
+
+.gender-input {
+    display: flex;
+    margin-top: 34px;
+    margin-bottom: 34px;
+    gap: 20px;
+}
+
+.real-checkbox {
+    z-index: -100;
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.custom-checkbox {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 1px solid $borderColor;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+.real-checkbox:checked+.custom-checkbox {
+    background-color: #FFF;
+    border: 4px solid $siteMainColor;
+}
+
+.loyalty {
+    max-width: 652px;
+    color: #000;
+    font-size: 24px;
+    font-weight: 300;
+
+    &__name {
+        font-weight: 300;
+        margin-bottom: 22px;
+    }
+
+    &__description {
+        margin-bottom: 21px;
+    }
+
+    &__list {
+        list-style-image: url('../img/marker.svg');
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-left: 26px;
+
+        &__paragraph {
+            padding-left: 23.08px;
+        }
+    }
+}
+
+
+@media (max-width: 1140px) {
+    .registration {
+        margin-top: 40px;
+        gap: 22.5px;
+    }
+
+    .loyalty {
+        font-size: 16px;
+
+        &__name {
+            font-size: 16px;
+            margin-bottom: 32px;
+        }
+
+        &__description {
+            max-width: 354px;
+        }
+
+        &__list {
+            gap: 22px;
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .registration {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 100px;
+    }
+}
